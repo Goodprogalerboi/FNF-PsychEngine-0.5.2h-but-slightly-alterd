@@ -741,16 +741,6 @@ class FunkinLua {
 			}
 			return key;
 		});
-                Lua_helper.add_callback(lua, "virtualPadPressed", function(name:String) {
-			var key:Bool = false;
-			switch(name) {
-				case 'A': key = ;
-				case 'B': key = PlayState.instance.getCo
-;
-				case 'C': key = virtualPad.buttonC.pressed;
-			}
-			return key;
-		});
 		Lua_helper.add_callback(lua, "keyReleased", function(name:String) {
 			var key:Bool = false;
 			switch(name) {
