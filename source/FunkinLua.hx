@@ -106,8 +106,8 @@ class FunkinLua {
 		set('seenCutscene', PlayState.seenCutscene);
 		
 		// Block require and os, Should probably have a proper function but this should be good enough for now until someone smarter comes along and recreates a safe version of the OS library
-		set('require', false);
-		set('os', false);
+		set('require', true);
+		set('os', true);
 
 		// Camera poo
 		set('cameraX', 0);
@@ -738,6 +738,16 @@ class FunkinLua {
 				case 'up': key = PlayState.instance.getControl('NOTE_UP');
 				case 'right': key = PlayState.instance.getControl('NOTE_RIGHT');
 				case 'space': key = FlxG.keys.pressed.SPACE;//an extra key for convinience
+			}
+			return key;
+		});
+                Lua_helper.add_callback(lua, "virtualPadPressed", function(name:String) {
+			var key:Bool = false;
+			switch(name) {
+				case 'A': key = ;
+				case 'B': key = PlayState.instance.getCo
+;
+				case 'C': key = virtualPad.buttonC.pressed;
 			}
 			return key;
 		});
